@@ -1,0 +1,42 @@
+<Delivery>
+    order: order
+    adress: adress
+    number: number
+    BoxLayout:
+        orientation: "vertical"
+        size: root.width*0.7, root.height*0.7
+        pos: root.width/7, root.width/9
+        spacing: 10
+        GridLayout:
+            cols: 2
+            spacing: 10
+            Label:
+                text: "order"
+                font_size: 36
+                id: order
+            TextInput:
+                font_size:36
+                id: order
+            Label:
+                text: "adress"
+                font_size: 36
+            TextInput:
+                font_size:36
+                id: adress
+            Label:
+                text: "Phone"
+                font_size: 36
+            TextInput:
+                font_size:36
+                id: number
+            Button:
+                text: "Accept"
+                background_color: 0, 0.7, 0.1
+                font_size: 36
+                size_hint: 0.5, 0.5
+                pos_hint: {"x":0.275}
+                on_press: root.press()
+
+
+
+
