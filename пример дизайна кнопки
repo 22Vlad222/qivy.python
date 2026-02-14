@@ -1,0 +1,13 @@
+from kivymd.app import MDApp
+from kivymd.uix.boxlayout import MDBoxLayout
+from kivymd.uix.gridlayout import MDGridLayout
+
+class BoxLayoutMD(MDBoxLayout):
+    pass
+
+class TutorialApp(MDApp):
+    def build(self):
+        return BoxLayoutMD()
+
+
+TutorialApp().run()
