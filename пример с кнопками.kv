@@ -1,0 +1,44 @@
+<MyScreenManager>
+    Screen:
+        name: "main_screen"
+        FloatLayout:
+            Button:
+                text: "Btn1"
+                size_hint: 0.25, 0.25
+                pos:0, root.height*0.75
+                on_press:
+                    root.current = "screen_1"
+                    root.transition.direction = "right"
+
+            Button:
+                text: "Btn2"
+                size_hint: 0.25, 0.25
+                pos: root.width*0.75, 0
+                on_press:
+                    root.current = "screen_2"
+                    root.transition.direction = "left"
+    Screen:
+        name: "screen_1"
+        FloatLayout:
+            Label:
+                text: "screen 1"
+            Button:
+                text: "Back"
+                size_hint: 0.25, 0.25
+                pos:0, root.height*0.75
+                on_press:
+                    root.current = "main_screen"
+                    root.transition.direction = "left"
+
+    Screen:
+        name: "screen_2"
+        FloatLayout:
+            Label:
+                text: "screen 2"
+            Button:
+                text: "Back"
+                size_hint: 0.25, 0.25
+                pos:0, root.height*0.75
+                on_press:
+                    root.current = "main_screen"
+                    root.transition.direction = "right"
